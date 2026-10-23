@@ -1,5 +1,8 @@
 # Automotive Speed & RPM Telemetry System: Hardware Interrupts, Non-Volatile EEPROM Odometer & HM-10 BLE Stream
 
+
+[![Firmware CI](https://github.com/ParthDalakoti/vehicle-speed-monitoring-system/actions/workflows/firmware-ci.yml/badge.svg)](https://github.com/ParthDalakoti/vehicle-speed-monitoring-system/actions) [![Wokwi Simulation](https://img.shields.io/badge/Simulation-Wokwi_Virtual_Lab-00B4D8.svg?style=for-the-badge&logo=espressif)](https://wokwi.com)
+
 [![Microcontroller](https://img.shields.io/badge/MCU-Arduino_Nano_(ATmega328P)-00979D.svg?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/)
 [![Interrupts](https://img.shields.io/badge/Architecture-Hardware_Interrupts_(INT0)-blue.svg?style=for-the-badge)]()
 [![Non-Volatile](https://img.shields.io/badge/Storage-Internal_EEPROM-FF5722.svg?style=for-the-badge)]()
@@ -67,3 +70,12 @@ graph LR
 *B.Tech in Electronics & Communication Engineering (2023–2027)*  
 *Graphic Era Hill University (GEHU), Bhimtal Campus*  
 *President, Robotics & Automation Club, GEHU*
+
+---
+
+## 📸 Hardware Bench Test Photos
+
+![Hardware Prototype Setup](media/hardware_demo_1.jpg)
+
+![Hardware Prototype Setup](media/hardware_demo_2.jpg)
+

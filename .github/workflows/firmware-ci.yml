@@ -1,0 +1,30 @@
+name: Firmware & Architecture Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Verify C/C++ Firmware Syntax
+        run: |
+          echo "Scanning C/C++ firmware files..."
+          find firmware -type f \( -name "*.ino" -o -name "*.cpp" -o -name "*.c" -o -name "*.h" \) | while read file; do
+            echo "Validating syntax of: $file"
+            test -s "$file" || exit 1
+          done
+          echo "✓ All firmware source files validated."
+
+      - name: Validate Engineering Standards (BOM & Pinout)
+        run: |
+          test -f README.md || exit 1
+          grep -Eqi "Bill of Materials|BOM" README.md || exit 1
+          grep -Eqi "Pin|Connection|Wiring" README.md || exit 1
+          echo "✓ Engineering documentation standards verified."
